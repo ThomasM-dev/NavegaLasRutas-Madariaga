@@ -8,3 +8,8 @@
 .nav-link :hover {
   color:brown
 }
+.cart {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
