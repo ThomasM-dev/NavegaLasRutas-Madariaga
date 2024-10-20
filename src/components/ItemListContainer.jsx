@@ -10,7 +10,6 @@ function ItemListContainer() {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        // Llamada a la API para obtener productos
         const url = categoryId 
           ? `https://fakestoreapi.com/products/category/${categoryId}` 
           : 'https://fakestoreapi.com/products';
@@ -32,12 +31,15 @@ function ItemListContainer() {
   }
 
   return (
-    <div>
+    <div className="product-list">
       {products.map(product => (
-        <div key={product.id}>
+        <div key={product.id} className="product-card">
           <h2>{product.title}</h2>
+          <img src={product.image} alt={product.title} style={{ width: '100%', height: 'auto' }} />
           <p>{product.description}</p>
-          <Link to={`/item/${product.id}`}>Ver Detalle</Link>
+          <Link to={`/item/${product.id}`}>
+            <button>Ver Detalles</button>
+          </Link>
         </div>
       ))}
     </div>
