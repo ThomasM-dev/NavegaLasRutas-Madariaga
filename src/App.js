@@ -6,7 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import NotFound from './components/NotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../src/App.css'
+import './App.css'
 
 
 function App() {
