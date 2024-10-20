@@ -36,7 +36,7 @@ function ItemDetailContainer() {
     <div>
       <h1>{product.title}</h1>
       <p>{product.description}</p>
-      <img src={product.image} alt={product.title} />
+      <img src={product.image} className='product-img' alt={product.title} />
       <ItemCount stock={5} initial={1} onAdd={(quantity) => console.log(`Agregar ${quantity} al carrito`)} />
     </div>
   );
